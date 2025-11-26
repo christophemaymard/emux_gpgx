@@ -1,3 +1,6 @@
 [submodule "3rdparty/sdl/SDL"]
 	path = 3rdparty/sdl/SDL
 	url = https://github.com/libsdl-org/SDL.git
+[submodule "3rdparty/zlib/zlib"]
+	path = 3rdparty/zlib/zlib
+	url = https://github.com/madler/zlib.git
