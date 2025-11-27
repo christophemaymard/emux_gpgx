@@ -442,7 +442,7 @@ static void yx5200_load_track(uint16 index, uint8 playbackLoop)
       else
       {
         /* close MP3 file in case MP3 decoder initialization returns an error */
-        cdStreamClose(mp3io.read_data);
+        cdStreamClose((cdStream*)mp3io.read_data);
       }
 
       /* exit loop when MP3 file has been found */
