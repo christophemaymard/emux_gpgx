@@ -460,7 +460,7 @@ static void yx5200_unload_track()
     mp3dec_ex_close(&mp3dec);
 
     /* close MP3 file */
-    cdStreamClose(mp3io.read_data);
+    cdStreamClose((cdStream*)mp3io.read_data);
 
     /* stop audio playback */
     yx5200.playbackEnabled = 0;
