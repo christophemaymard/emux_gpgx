@@ -1,0 +1,179 @@
+add_library(emux_core STATIC)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/genesis.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/genesis.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/hvc.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/io_ctrl.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/io_ctrl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/loadrom.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/loadrom.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/macros.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/mem68k.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/mem68k.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/membnk.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/membnk.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/memz80.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/memz80.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/shared.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/state.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/state.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/system.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/system.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/types.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/vdp_ctrl.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vdp_ctrl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/vdp_render.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vdp_render.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/areplay.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/areplay.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/eeprom_93c.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/eeprom_93c.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/eeprom_i2c.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/eeprom_i2c.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/eeprom_spi.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/eeprom_spi.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/flash_cfi.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/flash_cfi.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/ggenie.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/ggenie.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/md_cart.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/md_cart.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/megasd.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/megasd.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/sms_cart.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/sms_cart.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/sram.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/sram.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/yx5200.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/yx5200.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/svp/ssp16.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/svp/ssp16.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/svp/svp.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cart_hw/svp/svp.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/cd_cart.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/cd_cart.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/cdc.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/cdc.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/cdd.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/cdd.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/gfx.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/gfx.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/pcm.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/pcm.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/scd.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/cd_hw/scd.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/debug/cpuhook.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/debug/cpuhook.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/activator.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/activator.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/gamepad.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/gamepad.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/graphic_board.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/graphic_board.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/input.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/input.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/lightgun.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/lightgun.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/mouse.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/mouse.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/paddle.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/paddle.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/sportspad.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/sportspad.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/teamplayer.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/teamplayer.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/terebi_oekaki.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/terebi_oekaki.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/xe_1ap.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/input_hw/xe_1ap.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/m68k.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/m68kconf.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/m68kcpu.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/m68kcpu.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/m68ki_cycles.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/m68ki_instruction_jump_table.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/m68kops.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/s68kconf.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/s68kcpu.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/m68k/s68ki_cycles.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/ntsc/md_ntsc.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/ntsc/md_ntsc.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/ntsc/md_ntsc_config.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/ntsc/md_ntsc_impl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/ntsc/sms_ntsc.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/ntsc/sms_ntsc.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/ntsc/sms_ntsc_config.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/ntsc/sms_ntsc_impl.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/blip_buf.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/blip_buf.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/eq.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/eq.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/opll.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/opll.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/psg.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/psg.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/sound.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/sound.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/ym2413.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/ym2413.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/ym2612.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/ym2612.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/ym3438.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/ym3438.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/minimp3/minimp3.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sound/minimp3/minimp3_ex.h
+)
+
+target_sources(emux_core
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/z80/osd_cpu.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/z80/z80.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/z80/z80.h
+)
+
+# Since emux_core builds osd.h, which includes unzip.h, which itself includes zlib.h,
+# emux_core must link against 3rdparty::zlib.
+target_link_libraries(emux_core
+    PRIVATE
+        3rdparty::zlib
+)
+
+group_target_sources_by_directory_structure(emux_core)

@@ -1,3 +1,6 @@
 # Visual Studio and Visual Studio Code.
 .vs
 .vscode
+
+# Build system.
+/build/
