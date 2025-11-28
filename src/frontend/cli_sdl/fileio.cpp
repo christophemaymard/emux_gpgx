@@ -45,7 +45,7 @@
 
 static int check_zip(char *filename);
 
-int load_archive(char *filename, unsigned char *buffer, int maxsize, char *extension)
+int load_archive(const char *filename, unsigned char *buffer, int maxsize, char *extension)
 {
   int size = 0;
   
