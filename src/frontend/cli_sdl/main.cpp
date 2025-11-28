@@ -45,6 +45,8 @@ static uint8 brm_format[0x40] =
   0x52,0x41,0x4d,0x5f,0x43,0x41,0x52,0x54,0x52,0x49,0x44,0x47,0x45,0x5f,0x5f,0x5f
 };
 
+static uint8 g_state_buffer_load[STATE_SIZE];
+static uint8 g_state_buffer_save[STATE_SIZE];
 
 static short soundframe[SOUND_SAMPLES_SIZE];
 
@@ -372,9 +374,8 @@ static int sdl_control_update(SDL_Keycode keystate)
         FILE *f = fopen("game.gp0","rb");
         if (f)
         {
-          uint8 buf[STATE_SIZE];
-          fread(&buf, STATE_SIZE, 1, f);
-          state_load(buf);
+          fread(&g_state_buffer_load, STATE_SIZE, 1, f);
+          state_load(g_state_buffer_load);
           fclose(f);
         }
         break;
@@ -385,9 +386,8 @@ static int sdl_control_update(SDL_Keycode keystate)
         FILE *f = fopen("game.gp0","wb");
         if (f)
         {
-          uint8 buf[STATE_SIZE];
-          int len = state_save(buf);
-          fwrite(&buf, len, 1, f);
+          int len = state_save(g_state_buffer_save);
+          fwrite(&g_state_buffer_save, len, 1, f);
           fclose(f);
         }
         break;
