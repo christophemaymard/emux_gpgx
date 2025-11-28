@@ -12,6 +12,10 @@ Author: ekeeke \<ekeeke31@gmail.com\>
 
 Date: 2025-11-16 11:20:29 (+0100)
 
+## Building
+
+See the detailed build instructions in [BUILDING.md](./docs/BUILDING.md).
+
 ## License
 
 This project is licensed under a non-commercial license. See the [LICENSE](./LICENSE) file for details.
