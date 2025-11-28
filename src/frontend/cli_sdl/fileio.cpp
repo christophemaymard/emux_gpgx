@@ -56,7 +56,7 @@ int load_archive(const char *filename, unsigned char *buffer, int maxsize, char 
     char fname[256];
 
     /* Attempt to open the archive */
-    unzFile *fd = unzOpen(filename);
+    unzFile fd = unzOpen(filename);
     if (!fd) return 0;
 
     /* Go to first file in archive */
