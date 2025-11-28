@@ -1,4 +1,4 @@
-# EmuX
+# EmuX - Genesis Plus GX
 
 This project is a C++ port of the `Genesis Plus GX` emulator.
 
