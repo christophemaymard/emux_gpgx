@@ -43,7 +43,7 @@
 #include "shared.h"
 #include <zlib.h>
 
-static int check_zip(char *filename);
+static int check_zip(const char *filename);
 
 int load_archive(const char *filename, unsigned char *buffer, int maxsize, char *extension)
 {
@@ -146,7 +146,7 @@ int load_archive(const char *filename, unsigned char *buffer, int maxsize, char 
     Verifies if a file is a ZIP archive or not.
     Returns: 1= ZIP archive, 0= not a ZIP archive
 */
-static int check_zip(char *filename)
+static int check_zip(const char *filename)
 {
   uint8 buf[2];
   FILE *fd = fopen(filename, "rb");
